@@ -10,6 +10,7 @@ contract Score {
     *  but you can also make them smaller
     */
     uint256 public score;
+    address owner;
 
     /*
     *  be sure to add a visibility to all function
@@ -25,7 +26,28 @@ contract Score {
     }
     */
 
-    function setScore(uint256 _newScore) public {
+    modifier onlyOwner {
+        if (msg.sender == owner) {
+            // '_' means 'execute method that this modifier is applied to'
+            // so it is like modifier is wrapping around the function is modfies
+            _;
+        }
+    }
+    
+    /*
+    *  set inital state of the contract
+    *  this is run once at deployment
+    *  does not get included in bytecode
+    */
+    constructor() {
+        score = 5;
+
+        // this is the person who is deploying the contract since it comes from constructor
+        owner = msg.sender;
+
+    }
+
+    function setScore(uint256 _newScore) public onlyOwner {
         score = _newScore;
     }
 
