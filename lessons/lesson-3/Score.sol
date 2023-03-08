@@ -12,6 +12,8 @@ contract Score {
     uint256 public score;
     address owner;
 
+    event ScoreSet(uint256);
+
     /*
     *  be sure to add a visibility to all function
     *  otherwise they will default to public and throw a warning
@@ -53,6 +55,7 @@ contract Score {
 
     function setScore(uint256 _newScore) public onlyOwner {
         score = _newScore;
+        emit ScoreSet(_newScore);
     }
 
 }
