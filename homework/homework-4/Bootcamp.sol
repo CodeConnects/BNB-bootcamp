@@ -14,6 +14,17 @@ contract BootcampContract {
     constructor() {
         owner = msg.sender;
     }
+    
+    // 3. Write an external function that returns:
+    function returnOwner() external view returns (address) {
+        // 1. Address 0x000000000000000000000000000000000000dEaD if called by the deployer
+        if (msg.sender == owner) {
+            return 0x000000000000000000000000000000000000dEaD;
+        } else {
+            // 2. The deployer's address otherwise
+            return owner;
+        }
+    }
 
     function store(uint256 num) public {
         number = num;
