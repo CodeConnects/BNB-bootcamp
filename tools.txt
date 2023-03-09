@@ -1,2 +1,8 @@
 Remix in the browser
   https://remix.ethereum.org/
+
+OpenZeppelin
+  amazing source of well tested standard contracts
+  make your contract a child of one to inheriti functions
+  https://github.com/OpenZeppelin/openzeppelin-contracts
+ 
