@@ -12,6 +12,8 @@ contract DogCoin {
     // 8. Declare an address variable called owner . this address will be allowed to change the total supply
     address owner;
 
+    // 11. Create a constructor to initialise the state of the contract
+    // and within the constructor, store the owner's address.
     constructor() {
         totalSupply = 2000000;
         owner = msg.sender;
