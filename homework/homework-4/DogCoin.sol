@@ -17,6 +17,13 @@ contract DogCoin {
         owner = msg.sender;
     }
 
+    // 9. Next, create a modifier which only allows an owner to execute certain functions.
+    modifier onlyOwner {
+        // '_' is where the function body is inserted only if the condition of the modifier are satisfied
+        require(msg.sender == owner, "must be the owner to execute this function");
+        _;
+    }
+
     // 6. Make a public function that returns the total supply.
     function showTotalSupply() public view returns(uint256) {
         return totalSupply;
