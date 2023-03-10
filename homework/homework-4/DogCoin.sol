@@ -12,6 +12,9 @@ contract DogCoin {
     // 8. Declare an address variable called owner . this address will be allowed to change the total supply
     address owner;
 
+    // 12. Create an event that emits the new value whenever the total supply changes.
+    event NewTotalSupply(uint256);
+
     // 11. Create a constructor to initialise the state of the contract
     // and within the constructor, store the owner's address.
     constructor() {
@@ -35,5 +38,8 @@ contract DogCoin {
     // 10. Make your change total supply function public, but add your modifier so that only the owner can execute it.
     function increaseTotalSupply() onlyOwner public {
         totalSupply = totalSupply + 1000;
+
+        // When the supply changes, emit an event with this new supply.
+        emit NewTotalSupply(totalSupply);
     }
 }
