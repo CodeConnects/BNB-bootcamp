@@ -30,8 +30,8 @@ contract DogCoin {
     }
 
     // 7. Make a public function that can increase the total supply in steps of 1000.
-    function increaseTotalSupply() public {
+    // 10. Make your change total supply function public, but add your modifier so that only the owner can execute it.
+    function increaseTotalSupply() onlyOwner public {
         totalSupply = totalSupply + 1000;
     }
-
 }
