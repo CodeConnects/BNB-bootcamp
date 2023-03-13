@@ -1,1 +1,22 @@
+1. How many users are holding the pancake swap token 'cake'?
+  https://bscscan.com/token/0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82#balances
+  1,333,628 holders
 
+2. Approximately, how many unique addresses are there?
+
+3. Who validated the first block after the genesis block?
+  Validator: Sigma8
+  0x2a7cdd959bFe8D9487B2a43B33565295a698F7e2
+
+4. Roughly how many transactions are pending
+  https://bscscan.com/txsPending
+  A total of 158 pending txns found
+
+5. Which contract is consuming most gas?
+  PancakeSwap: Router v2
+  0x10ED43C718714eb63d5aA57B78B54704E256024E
+
+6. How much gas is needed to have a transaction get in a block within 5 10 s?
+
+7. What is special about this transaction:
+0x1bfbff8411ed44e609d911476b0d35a28284545b690902806ea0a7ff0453e931
