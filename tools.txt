@@ -6,3 +6,6 @@ OpenZeppelin
   make your contract a child of one to inheriti functions
   https://github.com/OpenZeppelin/openzeppelin-contracts
  
+BNB Chain Hello World Dapp
+  BSC Testnet boilerplate dapp. Technology stack used includes Solidity, Truffle, Ganache, Web3.js, and Node js.
+  https://github.com/bnb-chain/bnb-chain-tutorial/tree/main/01-%20Hello%20World%20Full%20Stack%20dApp%20on%20BSC
