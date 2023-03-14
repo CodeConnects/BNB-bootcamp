@@ -6,3 +6,5 @@ https://www.bnbchain.org/en/blog/from-zero-to-blockchain-hero-bnb-chain-builder-
 https://www.bnbchain.org/en/zero2hero-builder-series
 
 https://medium.com/encode-club/announcing-the-bnb-chain-zero2hero-builder-series-powered-by-encode-apply-now-9521f944aefc
+
+https://twitter.com/BNBCHAIN/status/1625457600060964869
