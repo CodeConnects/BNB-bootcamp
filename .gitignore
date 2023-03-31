@@ -1,2 +1,3 @@
 .gitmodules
 *.code-workspace
+node_modules
