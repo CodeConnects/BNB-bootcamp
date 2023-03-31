@@ -10,7 +10,7 @@ pragma solidity 0.8.18;
 contract Level_2_Solution {
     function solution(uint256[10] calldata unsortedArray) external pure returns (uint256[10] memory sortedArray) {
         sortedArray = unsortedArray;
-        /*
+        
         for (uint256 i = 0; i < sortedArray.length - 1; i++) {
             uint256 minIndex = i;
             for (uint256 j = i + 1; j < sortedArray.length; j++) {
@@ -24,8 +24,9 @@ contract Level_2_Solution {
                 sortedArray[minIndex] = temp;
             }
         }
-        */
-        // same for loop but inline assembly to save on gas
+        
+        // same for loop but trying inline assembly to save on gas
+        /*
         assembly {
             let sortedArrayPtr := add(sortedArray, 32)
             let length := mload(sortedArray)
@@ -50,5 +51,6 @@ contract Level_2_Solution {
                 mstore(minIndexPtr, temp)
             }
         }
+        */
     }
 }

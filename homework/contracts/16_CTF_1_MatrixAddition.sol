@@ -10,13 +10,14 @@ pragma solidity 0.8.18;
 contract Level_1_Solution {
   function solution(uint256[2][2] calldata x, uint256[2][2] calldata y) external pure returns (uint256[2][2] memory finalArray) {
     // Loop through each element of the matrices and add them together
-    /*for (uint256 i = 0; i < 2; i++) {
+    for (uint256 i = 0; i < 2; i++) {
         for (uint256 k = 0; k < 2; k++) {
             finalArray[i][k] = x[i][k] + y[i][k];
         }
-    }*/
+    }
 
-    // same loop but with inline assembly
+    // same loop but tring inline assembly to save on gas
+    /*
     assembly {
       let i := 0
       let k := 0
@@ -33,5 +34,6 @@ contract Level_1_Solution {
         k := 0
       }
     }
+    */
   }
 }
