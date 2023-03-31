@@ -1,6 +1,22 @@
-require("@nomicfoundation/hardhat-toolbox");
+require("@nomiclabs/hardhat-waffle");
+require("hardhat-gas-reporter");
 
-/** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
-  solidity: "0.8.18",
+  solidity: {
+    compilers: [
+      {
+        version: "0.8.18",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 10,
+          },
+        },
+      },
+    ],
+  },
+  gasReporter: {
+    enabled: true,
+    currency: "USD",
+  },
 };
